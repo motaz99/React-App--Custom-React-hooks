@@ -15,12 +15,12 @@ function App() {
       const response = await fetch(
         'https://custom-reachooks-and-data-base-default-rtdb.europe-west1.firebasedatabase.app/tasks.json'
       );
-
       if (!response.ok) {
         throw new Error('Request failed!');
       }
-
+      
       const data = await response.json();
+      //console.log(data)
 
       const loadedTasks = [];
 
